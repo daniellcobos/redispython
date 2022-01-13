@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="portfolio-block block-intro">
+    <h1 class="title">
+        Guarda tus post-its
+      </h1>
+      <h2 class="subtitle">
+        O no
+      </h2>
+</div>
+ <div class="container">
+    <form method="POST" action="/post">
+        <div  class="form-group">
+            <label for= email> Titulo </label>
+            <div class="control">
+                <input class="form-control" type="text" name="title" placeholder="Titulo" autofocus="">
+            </div>
+        </div>
+
+        <div  class="form-group">
+            <label for= password> Contenido </label>
+            <div class="control">
+                <input class="form-control" type="textarea" name="text" placeholder="Texto">
+            </div>
+        </div>
+
+        <button  class="btn btn-primary">Enviar</button>
+        </form>
+        <a class="links" href="/postlist"> Puedes ver todos los post aqui</a>
+ </div>
+
+{% endblock %}
